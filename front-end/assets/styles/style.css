@@ -103,23 +103,21 @@ CONTENT
     padding: 10px;
     display: block;
 }
-
-.content__menu li {
-    border-top: 1px solid var(--blue-sec);
-}
-.content__menu li:first-child {
-    border-top: none;
-}
-
 @media (min-width: 1024px) {
     .content__menu a {
         padding: 5px 20px;
     }
 }
-
+.content__menu li {
+    border-top: 1px solid var(--blue-sec);
+}
+.content__menu li:first-child {
+    border: none;
+}
 @media (min-width: 1024px) {
     .content__menu li {
         border-top: none;
+        border-left:1px solid var(--blue-sec);
     }
 }
 .selected,
