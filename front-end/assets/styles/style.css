@@ -192,6 +192,107 @@ footer {
     margin-top: 2rem;
 }
 
+.desktop-only {
+ display: none;
+}
+@media (min-width: 768px) {
+    .desktop-only {
+        display: block;
+    }
+    .mobile-only {
+        display: none;
+    }
+}
+
+.footer__cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+    .footer__cards {
+        width: 90%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+.footer__cards__item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc(33% - 1rem);
+    border: 1px solid var(--blue);
+    text-align: center;
+    padding: 15px 0;
+}
+@media (min-width: 768px) {
+    .footer__cards__item {
+        border: none;
+        flex-basis: calc(25% - 0.5rem);
+        text-align: left;
+    }
+}
+.footer__cards__item:first-child {
+    flex-basis: 100%;
+    text-align: left;
+}
+@media (min-width: 768px) {
+    .footer__cards__item:first-child {
+        flex-basis: auto;
+    }
+}
+
+.footer__cards__item:first-child .footer__cards__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .footer__cards__item .footer__cards__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.footer__cards__item:first-child .footer__cards__text {
+    display: block;
+    margin-left: 10px;
+}
+@media (min-width: 768px) {
+    .footer__cards__item .footer__cards__text {
+        display: block;
+        margin-left: 10px;
+    }
+}
+
+.footer__cards__item h4 {
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+}
+@media (min-width: 1024px) {
+    .footer__cards__item h4 {
+        font-size: 1rem;
+    }
+}
+.footer__cards__item:first-child p {
+    font-size: 0.7rem;
+}
+@media (min-width: 768px) {
+    .footer__cards__item:first-child p,
+    .footer__cards__item p {
+        font-size: 0.65rem;
+    }
+}
+@media (min-width: 1024px) {
+    .footer__cards__item p,
+    .footer__cards__item:first-child p {
+        font-size: 0.8rem;
+    }
+}
+
+.footer__cards a {
+    color: var(--white);
+}
+
 .footer__assign {
     background-color: var(--blue);
     color: var(--white);
@@ -200,10 +301,15 @@ footer {
 .footer__assign p {
     text-align: center;
     font-size: 0.7rem;
-    padding: 50px 0;
+    padding: 25px 0;
+}
+@media (min-width: 768px) {
+    .footer__assign p {
+        padding: 40px 0;
+    }
 }
 .footer__assign img {
-    width: 20px;
+    width: 16px;
     margin: 0 0.2rem;
     position: relative;
     top: 5px;
