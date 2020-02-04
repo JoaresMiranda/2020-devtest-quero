@@ -72,6 +72,9 @@ CONTENT
     line-height: 1.6rem;
 }
 
+.content__menu {
+    position: relative;
+}
 
 .content__menu ul {
     border: 1px solid var(--blue-sec);
@@ -83,17 +86,25 @@ CONTENT
     text-align: center;
     list-style: none;
     font-size: 0.9rem;
+    flex-grow: 1;
 }
 
 @media (min-width: 1024px) {
-    .content__menu li {
-        display: inline-block;
+    .content__menu ul {
+        display: flex;
+        width: 540px;
+        justify-items: flex-end;
     }
 }
 .content__menu a {
-    padding: 10px 0;
+    padding: 10px;
     display: block;
     border-top: 1px solid var(--blue-sec);
+}
+@media (min-width: 1024px) {
+    .content__menu a {
+        padding: 5px 20px;
+    }
 }
 .content__menu a:first-child {
     border-top: none;
@@ -101,7 +112,6 @@ CONTENT
 @media (min-width: 1024px) {
     .content__menu a {
         border-top: none;
-
     }
 }
 .selected,
@@ -147,7 +157,7 @@ CARDS
 @media (min-width: 1024px) {
     .cards__item {
         display: inline-block;
-        margin: 0.5rem 1.5rem 0.5rem 0;
+        margin: 0.5rem 2rem 2rem 0;
         max-width: 280px;
     }
 }
