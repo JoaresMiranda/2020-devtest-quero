@@ -66,7 +66,7 @@ a {
 
 
 /*
-CONTENT
+* Content
 */
 .content__container p {
     line-height: 1.6rem;
@@ -127,15 +127,8 @@ CONTENT
 }
 
 
-
-
-
-
-
-
-
 /*
-CARDS
+* Cards
 */
 .cards__container {
     max-width: 1440px;
@@ -187,4 +180,31 @@ CARDS
     width: 70%;
     margin: 0.2rem auto;
     line-height: 1.4rem;
+}
+
+
+/*
+* Footer
+*/
+footer {
+    background-color: var(--blue-sec);
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+.footer__assign {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.footer__assign p {
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 50px 0;
+}
+.footer__assign img {
+    width: 20px;
+    margin: 0 0.2rem;
+    position: relative;
+    top: 5px;
 }
