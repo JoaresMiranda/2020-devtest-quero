@@ -216,6 +216,10 @@ footer {
     }
 }
 
+.footer__cards__item:hover {
+    background-color: var(--blue);
+}
+
 .footer__cards__item {
     flex-grow: 1;
     flex-shrink: 0;
@@ -227,7 +231,7 @@ footer {
 @media (min-width: 768px) {
     .footer__cards__item {
         border: none;
-        flex-basis: calc(25% - 0.5rem);
+        flex-basis: 25%;
         text-align: left;
     }
 }
@@ -237,7 +241,7 @@ footer {
 }
 @media (min-width: 768px) {
     .footer__cards__item:first-child {
-        flex-basis: auto;
+        flex-basis: 25%;
     }
 }
 
