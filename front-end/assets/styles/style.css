@@ -63,7 +63,130 @@ a {
     margin: 0 auto;
 }
 
+.desktop-only {
+    display: none;
+   }
+   @media (min-width: 768px) {
+       .desktop-only {
+           display: block;
+       }
+       .mobile-only {
+           display: none;
+       }
+   }
+   
 
+/*
+* Header
+*/
+.header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+.header__nav__title {
+    font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+    .header__nav__title {
+        font-size: 0.8rem;
+    }
+}
+.brand {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.brand img {
+    width: 130px;
+}
+@media (min-width: 768px) {
+    .brand img {
+        width: 160px;
+    }
+}
+
+.header__nav,
+.header__login {
+    display: flex;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .header__nav,
+    .header__login {
+        width: 40%;
+    }
+}
+
+.header__nav__como-funciona {
+    border-right: 2px solid #ECECED;
+    padding-right: 1rem;
+}
+@media (min-width: 768px) {
+    .header__nav__como-funciona {
+        border: none;
+    }
+}
+@media (min-width: 1024px) {
+    .header__nav__como-funciona {
+        border-right: 2px solid #ECECED;
+        margin-right: 1rem;;
+    }
+}
+@media (min-width: 768px) {
+    .header__nav__como-funciona {
+        display: flex;
+        align-items: center;
+    }
+    .header__nav__whatsapp {
+        display: none;
+    }
+}
+@media (min-width: 1024px) {
+    .header__nav__whatsapp {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__nav img {
+        margin-right: 0.5rem;
+    }
+}
+
+.header__nav__whatsapp__text {
+    display: block;
+}
+.header__nav__whatsapp p {
+    font-size: 0.8rem;
+}
+
+.header__login {
+    border-left: 2px solid #ECECED;
+    padding-left: 1rem;
+}
+@media (min-width: 768px) {
+    .header__login {
+        padding: 0;
+        border: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+@media (min-width: 768px) {
+    .header__login__itens {
+        display: flex;
+        align-items: center;
+    }
+}
+@media (min-width: 768px) {
+    .header__login__itens .header__nav__title {
+        order: -1;
+        margin-right: 0.5rem;
+    }
+}
 
 /*
 * Content
@@ -188,18 +311,6 @@ footer {
     background-color: var(--blue-sec);
     color: var(--white);
     margin-top: 2rem;
-}
-
-.desktop-only {
- display: none;
-}
-@media (min-width: 768px) {
-    .desktop-only {
-        display: block;
-    }
-    .mobile-only {
-        display: none;
-    }
 }
 
 .footer__cards {
