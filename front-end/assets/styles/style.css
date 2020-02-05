@@ -263,16 +263,23 @@ a {
         display: block;
         padding: 10px 20px;
     }
+    .header__group__links__list a:hover,
     .header__group__links__list .selected {
         background-color: var(--blue-sec);
     }
 }
 
 
-
 /*
 * Content
 */
+
+.breadcrumb {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;;
+}
+
 .content__container p {
     line-height: 1.6rem;
 }
