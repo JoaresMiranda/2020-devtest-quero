@@ -42,11 +42,16 @@
             </div>
         </div>
         <nav class="header__menu">
-            <ul class="header__group__links">
-                <li><a href="#">Minha conta</a></li>
-                <li><a href="#">Pré-matrículas</a></li>
-                <li><a href="#" class="selected">Bolsas favoritas</a></li>
-            </ul>
+            <div class="header__menu__container container">
+                <h4><a href="#">Minha conta</a></h4>
+                <div class="header__group__links">
+                    <p class="header__group__menu__title" onclick="menuToggle()">Menu <img src="./assets/images/ic-menu.svg" alt=""></p>
+                    <ul class="header__group__links__list">
+                        <li><a href="#">Pré-matrículas</a></li>
+                        <li><a href="#" class="selected">Bolsas favoritas</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -145,4 +150,5 @@
         </div>
     </footer>
 </body>
+<script src="./assets/scripts/main.js"></script>
 </html>
