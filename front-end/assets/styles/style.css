@@ -94,7 +94,7 @@ a {
     }
 }
 .brand {
-    width: 80%;
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -115,21 +115,10 @@ a {
 @media (min-width: 768px) {
     .header__nav,
     .header__login {
-        width: 30%;
-    }
-    .brand {
         width: 40%;
     }
 }
-@media (min-width: 1024px) {
-    .header__nav,
-    .header__login {
-        width: 40%;
-    }
-    .brand {
-        width: 20%;
-    }
-}
+
 .header__nav__como-funciona {
     border-right: 2px solid #ECECED;
     padding-right: 1rem;
@@ -139,7 +128,6 @@ a {
         border: none;
     }
 }
-
 @media (min-width: 1024px) {
     .header__nav__como-funciona {
         border-right: 2px solid #ECECED;
@@ -147,8 +135,7 @@ a {
     }
 }
 @media (min-width: 768px) {
-    .header__nav__como-funciona,
-    .header__login__itens {
+    .header__nav__como-funciona {
         display: flex;
         align-items: center;
     }
@@ -176,9 +163,6 @@ a {
     font-size: 0.8rem;
 }
 
-
-
-
 .header__login {
     border-left: 2px solid #ECECED;
     padding-left: 1rem;
@@ -186,17 +170,18 @@ a {
 @media (min-width: 768px) {
     .header__login {
         padding: 0;
-        border: 1px solid red;
+        border: none;
         display: flex;
-    }
-}
-
-@media (min-width: 768px) {
-    .header__login__itens {
-        border: 1px solid green;
         justify-content: flex-end;
     }
-
+}
+@media (min-width: 768px) {
+    .header__login__itens {
+        display: flex;
+        align-items: center;
+    }
+}
+@media (min-width: 768px) {
     .header__login__itens .header__nav__title {
         order: -1;
         margin-right: 0.5rem;
