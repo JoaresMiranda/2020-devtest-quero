@@ -14,24 +14,38 @@
 <body>
     <header>
         <div class="header__container container">
-            <div class="header__help">
-                <ul>
-                    <li class="header__help__info"><a href="#">Como funciona</a></li>
-                    <li class="header__help__whatsapp"><a href="#"><span>0800 123 2222</span> Envie mensagem ou ligue</a></li>
-                </ul>
+            <div class="header__nav">
+                <a class="header__nav__como-funciona" href="#">
+                    <img src="./assets/images/ic-info-color.svg">
+                    <h4 class="desktop-only">Como funciona</h4>
+                    <h4 class="mobile-only">Ajuda</h4>
+                </a>
+                <a class="header__nav__whatsapp desktop-only" href="#">
+                    <img src="./assets/images/ic-whatsapp-color.svg">
+                    <h4>0800 123 2222</h4>
+                    <p>Envie mensagem ou ligue</p>
+                </a>
             </div>
-            <a href="#" class="brand"><img src="./assets/images/logo-quero-bolsa.png" alt="Logo Quero Bolsa" title="Quero Bolsa"></a>
-
-            <a href="#" class="header__login">Nome Sobrenome <img src="./assets/images/ic-user.svg"></a>
             
-            <nav class="header__menu">
-                <ul class="header__group__links">
-                    <li><a href="#">Minha conta</a></li>
-                    <li><a href="#">Pré-matrículas</a></li>
-                    <li><a href="#">Bolsas favoritas</a></li>
-                </ul>
-            </nav>
+            <a href="#" class="brand">
+                <img src="./assets/images/logo-quero-bolsa.png" alt="Logo Quero Bolsa" title="Quero Bolsa">
+            </a>
+
+            <div class="header__login">
+                <a href="#">
+                    <h4 class="desktop-only">Nome Sobrenome</h4>
+                    <h4 class="mobile-only">Conta</h4>
+                    <img src="./assets/images/ic-user.svg">
+                </a>
+            </div>
         </div>
+        <nav class="header__menu">
+            <ul class="header__group__links">
+                <li><a href="#">Minha conta</a></li>
+                <li><a href="#">Pré-matrículas</a></li>
+                <li><a href="#" class="selected">Bolsas favoritas</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="main__container container">

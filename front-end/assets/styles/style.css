@@ -64,6 +64,18 @@ a {
 }
 
 
+/*
+* Header
+*/
+.header__container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
 
 /*
 * Content
