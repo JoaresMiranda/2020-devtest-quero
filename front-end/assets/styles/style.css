@@ -718,12 +718,12 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    min-height:100vh;
+    height: 100vh;
     background-color: rgba(31,45,48, 0.88);
     z-index: 1;
     font-size: 0.8rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .modal__search {
         display: flex;
         justify-content: center;
@@ -738,8 +738,11 @@ footer {
 .modal__search__main {
     background-color: white;
     padding-bottom: 1rem;
+    max-height:calc(100vh - 50px);
+    overflow: scroll;
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 768px) {
     .modal__search__content {
         width: 750px;
     }
@@ -754,7 +757,7 @@ footer {
     margin-bottom: 0.3rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .modal__search__form {
         display: flex;
         flex-wrap: wrap;
@@ -834,7 +837,6 @@ footer {
 .modal__price {
     margin-top: 0.3rem;
 }
-
 .selectValue {
     -webkit-appearance: none;
     width: 100%;
@@ -846,11 +848,9 @@ footer {
     transition: opacity .2s;
     margin-top: 1rem;
 }
-
 .selectValue:hover {
 opacity: 1;
 }
-
 .selectValue::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -867,4 +867,83 @@ opacity: 1;
     background: #FFF;
     border-radius:20px;
     border:2px solid var(--blue);
+}
+
+.result__checkbox {
+    margin-right: 0.5rem;
+}
+.result__title,
+.result__item {
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--grey);
+}
+.result__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.result__school {
+    margin-right: 1rem;
+    padding: 0.3rem;
+    text-align: center;
+}
+.result__school img {
+    width: 100px;
+}
+@media (min-width: 768px) {
+    .result__school img {
+        width: 130px;
+    }
+}
+.result__item__detail {
+    font-size: 0.8rem;
+}
+.result__item__namecourse{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.result__item__course {
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    .result__item__course {
+        margin-bottom: 0;
+    }
+    .result__item__price {
+        font-size: 0.9rem;
+    }
+}
+
+.result__item__price span {
+    color: var(--green);
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .result__item__detail {
+        display: flex;
+        flex-grow: 1;
+    }
+    .result__item__detail div {
+        width: 50%;
+        text-align: right;
+    }
+    .result__item__detail div:first-child {
+        text-align: left;
+    }
+}
+
+.modal__buttons {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .modal__buttons {
+        text-align: right;
+    }
 }
