@@ -568,8 +568,6 @@ main {
     cursor: not-allowed;
 }
 
-
-
 /*
 * Footer
 */
@@ -705,7 +703,6 @@ footer {
 /*
 * Modal
 */
-
 .modal__search {
     position: fixed;
     top: 0;
@@ -714,8 +711,112 @@ footer {
     min-height:100vh;
     background-color: rgba(31,45,48, 0.88);
     z-index: 1;
+    font-size: 0.8rem;
 }
-
-.modal__search__main{
+@media (min-width: 1024px) {
+    .modal__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.modal__search__content__close {
+    padding: 0.5rem;
+    display: block;
+    text-align: right;
+}
+.modal__search__main {
     background-color: white;
 }
+@media (min-width: 1024px) {
+    .modal__search__content {
+        width: 860px;
+    }
+}
+
+.modal__search__header {
+    width: 90%;
+    padding-top: 1rem;
+    margin: 0 auto;
+}
+.modal__search__header .modal__search__main__title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.modal__search__form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.modal__search__form__question {
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+.modal__search__form select {
+    background-color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 3px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    width: 100%;
+    margin-top:0.2rem;
+}
+
+
+
+
+
+
+.modal__search__form ul {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.modal__search__form li {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+
+.modal__checkbox {
+    position: absolute;
+    opacity: 0;
+}
+.modal__checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+.modal__checkbox + label:before {
+    content: "";
+    margin-right: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid var(--grey);
+}
+.modal__checkbox:hover + label:before {
+    background: var(--blue);
+}
+
+.modal__checkbox:checked + label:before {
+    background: var(--blue);
+}
+
+.modal__checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+  
