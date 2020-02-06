@@ -125,43 +125,53 @@
             <div class="modal__search__content">
                 <a class="modal__search__content__close" href="#"><img src="./assets/images/ic-close.svg"></a>
                 <div class="modal__search__main">
-                    <div class="modal__search__header">
+                    <div class="modal__search__header container">
                         <h4 class="modal__search__main__title">Adicionar bolsa</h4>
                         <p>Filtre e adicione as bolsas de seu interesse.</p>
                     </div>
                     <form>
-                        <div class="modal__search__form">
-                            <p class="modal__search__form__question uppercase">Selecione sua cidade</p>
-                            <select>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                            </select>
-                            <p class="modal__search__form__question uppercase">Selecione o curso de sua preferência</p>
-                            <select>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                                <option>Fortaleza</option>
-                            </select>
-                            <p class="modal__search__form__question uppercase">Como você quer estudar?</p>
-                            <ul>
-                                <li><input type="checkbox" id="checkbox-1" class="modal__checkbox"> <label for="checkbox-1">Presencial</label></li>
-                                <li><input type="checkbox"id="checkbox-2" class="modal__checkbox"> <label for="checkbox-2">A distância</label></li>
-                            </ul>
-                            <p class="modal__search__form__question uppercase">Até quanto pode pagar?</p>
-                            <p>R$ 10.000</p>
-                            <input type="range" name="points" min="0" max="1000">
-
+                        <div class="modal__search__form container">
+                            <div class="modal__search__group">
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Selecione sua cidade</p>
+                                    <select>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Selecione o curso de sua preferência</p>
+                                    <select>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal__search__group">
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Como você quer estudar?</p>
+                                    <ul>
+                                        <li><input type="checkbox" id="checkbox-1" class="modal__checkbox"> <label for="checkbox-1">Presencial</label></li>
+                                        <li><input type="checkbox"id="checkbox-2" class="modal__checkbox"> <label for="checkbox-2">A distância</label></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Até quanto pode pagar?</p>
+                                    <p class="modal__price">R$ <span id="price-range"></span></p>
+                                    <input type="range" class="selectValue" id="rangeValue" value="3000" min="0" max="10000">
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="modal__search__result">
+                        <div class="modal__search__result container">
                             <h4 class="modal__search__result__title">Resultado:</h4>
                             <div class="modal__search__result__group">
-
                                 <div class="modal__search__result__item">
                                     <input type="checkbox">
                                     <img src="./uploads/logo-facul.png">
@@ -178,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="modal__search__result__button">
+                        <div class="modal__search__result__button container">
                             <button type="submit" class="button btn-secondary">Cancelar</button>
                             <button type="submit" class="button btn-disable">Adicionar bolsa(s)</button>
                         </div>

@@ -700,6 +700,16 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*
 * Modal
 */
@@ -727,26 +737,38 @@ footer {
 }
 .modal__search__main {
     background-color: white;
+    padding-bottom: 1rem;
 }
 @media (min-width: 1024px) {
     .modal__search__content {
-        width: 860px;
+        width: 750px;
     }
 }
 
 .modal__search__header {
-    width: 90%;
     padding-top: 1rem;
-    margin: 0 auto;
+
 }
-.modal__search__header .modal__search__main__title {
-    font-size: 1.1rem;
+.modal__search__main__title {
+    font-size: 1.3rem;
     margin-bottom: 0.3rem;
 }
 
-.modal__search__form {
-    width: 90%;
-    margin: 0 auto;
+@media (min-width: 1024px) {
+    .modal__search__form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .modal__search__group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .modal__search__group div {
+        width: calc(50% - 1rem);
+        margin: 0 1rem;
+        flex-grow: 1;
+    }
 }
 
 .modal__search__form__question {
@@ -765,10 +787,6 @@ footer {
 }
 
 
-
-
-
-
 .modal__search__form ul {
     display: flex;
     align-items: center;
@@ -778,8 +796,6 @@ footer {
     list-style: none;
     margin-right: 2rem;
 }
-
-
 .modal__checkbox {
     position: absolute;
     opacity: 0;
@@ -799,14 +815,9 @@ footer {
     background: white;
     border: 1px solid var(--grey);
 }
-.modal__checkbox:hover + label:before {
-    background: var(--blue);
-}
-
 .modal__checkbox:checked + label:before {
     background: var(--blue);
 }
-
 .modal__checkbox:checked + label:after {
     content: "";
     position: absolute;
@@ -819,4 +830,41 @@ footer {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
-  
+
+.modal__price {
+    margin-top: 0.3rem;
+}
+
+.selectValue {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: var(--blue);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 1rem;
+}
+
+.selectValue:hover {
+opacity: 1;
+}
+
+.selectValue::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #FFF;
+    cursor: pointer;
+    border-radius:20px;
+    border:2px solid var(--blue);
+}
+.selectValue::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #FFF;
+    border-radius:20px;
+    border:2px solid var(--blue);
+}

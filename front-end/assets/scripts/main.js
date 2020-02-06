@@ -6,3 +6,12 @@ const toggleOpen = element => element.classList.toggle('is-open');
 
 // Menu open/close
 const menuToggle = () => toggleOpen(menuContainer);
+
+
+// Range Value
+var slider = document.getElementById("rangeValue");
+var output = document.getElementById("price-range");
+output.innerHTML = slider.value;
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
