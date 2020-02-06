@@ -535,7 +535,7 @@ main {
     font-size: 1.4rem;
 }
 
-.cards__item__bolsa-botoes .button {
+.button {
     border: 1px solid;
     padding: 0.4rem 1.2rem;
     margin: 0.2rem;
@@ -544,22 +544,28 @@ main {
     font-weight: 600;
     cursor: pointer;
 }
-.cards__item__bolsa-botoes .btn-secondary {
+.btn-secondary {
     border-color: var(--blue-sec);
     color: var(--blue-sec);
     background-color: var(--white);
 }
-.cards__item__bolsa-botoes .btn-secondary:hover {
+.btn-secondary:hover {
     background-color: var(--blue-sec);
     color: var(--white);
 }
-.cards__item__bolsa-botoes .btn-primary {
+.btn-primary {
     border-color: var(--yellow-sec);
     background-color: var(--yellow);
 }
-.cards__item__bolsa-botoes .btn-primary:hover {
+.btn-primary:hover {
     background-color: var(--yellow-sec);
     color: var(--white);
+}
+.btn-disable {
+    border-color: #7A8183;
+    color: #7A8183;
+    background-color: #C4C4C4;
+    cursor: not-allowed;
 }
 
 
@@ -691,4 +697,25 @@ footer {
     margin: 0 0.2rem;
     position: relative;
     top: 5px;
+}
+
+
+
+
+/*
+* Modal
+*/
+
+.modal__search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height:100vh;
+    background-color: rgba(31,45,48, 0.88);
+    z-index: 1;
+}
+
+.modal__search__main{
+    background-color: white;
 }

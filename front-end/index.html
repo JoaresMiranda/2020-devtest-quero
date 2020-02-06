@@ -90,15 +90,8 @@
                             </div>
                         </a>
                     </div>
-
-
-
-
-
-
-
-
                     
+                    <!-- Exemplo de bolsa adicionada -->
                     <div class="cards__item cards__item__bolsa">
                         <div class="cards__item__bolsa-header">
                             <img class="cards__item__bolsa__brand" src="./uploads/logo-facul.png">
@@ -120,10 +113,84 @@
                             <button type="submit" class="button btn-primary">Ver oferta</button>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
+
+
+
+
+        <!-- MODAL-->
+        <div class="modal__search">
+            <div class="modal__search__content">
+                <img src="./assets/images/ic-close.svg">
+                <div class="modal__search__main">
+                    
+                    <div class="modal__search__header">
+                        <h4 class="modal__search__main__title">Adicionar bolsa</h4>
+                        <p>Filtre e adicione as bolsas de seu interesse.</p>
+                    </div>
+                    <form>
+                        <div class="modal__search__form">
+                            <p>Selecione sua cidade</p>
+                            <select>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                            </select>
+                            <p>Selecione o curso de sua preferência</p>
+                            <select>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                                <option>Fortaleza</option>
+                            </select>
+                            <p>Como você quer estudar?</p>
+                            <p>
+                                <input type="checkbox"> Presencial
+                                <input type="checkbox"> A distância
+                            </p>
+                            <p>Até quanto pode pagar?</p>
+                            <p>R$ 10.000</p>
+                            <input type="range" name="points" min="0" max="1000">
+
+                        </div>
+
+                        <div class="modal__search__resultado">
+                            <h4 class="modal__search__resultado__title">Resultado:</h4>
+                            <div class="modal__search__resultado__group">
+
+                                <div class="modal__search__resultado__item">
+                                    <input type="checkbox">
+                                    <img src="./uploads/logo-facul.png">
+                                    <div class="modal__search__resultado__item__detalhe">
+                                        <div>
+                                            <p class="modal__search__nomecurso">Administração</p>
+                                            <p class="modal__search__tipocurso">Bacharelado</p>
+                                        </div>
+                                        <div>
+                                            <p class="modal__search__bolsacurso">Bolsa de <span>75%</span></p>
+                                            <p class="modal__search__precocurso"><span>R$ 373 /mês</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__search__resultado__button">
+                            <button type="submit" class="button btn-secondary">Cancelar</button>
+                            <button type="submit" class="button btn-disable">Adicionar bolsa(s)</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- FIM DO MODAL-->
+
+
     </main>
     <footer>
         <div class="footer__container">
