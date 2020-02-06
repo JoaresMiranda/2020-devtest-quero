@@ -132,7 +132,7 @@ a {
 @media (min-width: 1024px) {
     .header__nav__como-funciona {
         border-right: 2px solid #ECECED;
-        margin-right: 1rem;;
+        margin-right: 1rem;
     }
 }
 @media (min-width: 768px) {
@@ -164,6 +164,9 @@ a {
     border-left: 2px solid #ECECED;
     padding-left: 1rem;
 }
+.header__login__itens {
+    text-align: center;
+}
 @media (min-width: 768px) {
     .header__login {
         padding: 0;
@@ -190,17 +193,22 @@ a {
 }
 
 .header__menu__container {
-    margin: 0.5rem auto 1rem auto;
+    margin: 0 auto;
     list-style: none;
     display: flex;
     align-items: center;
 }
 .header__menu__container h4 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     margin-right: 2rem;
     flex-grow: 1;
-    padding: 8px 0;
+    padding: 9px 0;
+}
+@media (min-width: 768px) {
+    .header__menu__container h4 {
+        font-size: 0.9rem;
+    }
 }
 @media (min-width: 1024px) {
     .header__menu__container h4 {
@@ -212,7 +220,7 @@ a {
     color: var(--white);
 }
 .header__group__links {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -279,18 +287,34 @@ a {
 /*
 * Content
 */
+main {
+    background-color: var(--light-grey);
+    padding: 1rem 0 9rem 0;
+}
 
 .breadcrumb {
     font-size: 0.8rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    .breadcrumb {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }
 .breadcrumb li {
     list-style: none;
     margin: 0 0.5rem;
     display: inline;
 }
-.breadcrumb li:not(:nth-child(2n)) {
+.breadcrumb li:first-child {
+    margin-left: 0;
+}
+
+.breadcrumb li:not(:nth-child(3n)),
+.breadcrumb span {
     display: none;
 }
 .icon-back {
@@ -303,7 +327,8 @@ a {
 }
 
 @media (min-width: 768px) {
-    .breadcrumb li:not(:nth-child(2n)) {
+    .breadcrumb li:not(:nth-child(3n)),
+    .breadcrumb span {
         display: inline;
     }
     .icon-back {
@@ -324,7 +349,7 @@ a {
 .content__menu ul {
     border: 1px solid var(--blue-sec);
     border-radius: 3px;
-    margin: 1rem auto 1.5rem auto;
+    margin: 1rem auto;
     text-align: right;
 }
 @media (min-width: 1024px) {
@@ -380,7 +405,7 @@ a {
 .cards__item {
     box-shadow: 0 3px 0.5em var(--grey);
     text-align: center;
-    padding: 120px 0;
+    padding: 10px 0;
     width: 100%;
     margin: 1rem;
 }
@@ -388,6 +413,7 @@ a {
     .cards__item {
         max-width: calc(50% - 1rem);
         margin: 0.5rem;
+        padding: 120px 0;
     }
 }
 @media (min-width: 1024px) {
@@ -429,7 +455,6 @@ a {
 footer {
     background-color: var(--blue-sec);
     color: var(--white);
-    margin-top: 2rem;
 }
 
 .footer__cards {
