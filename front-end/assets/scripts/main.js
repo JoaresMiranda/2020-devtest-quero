@@ -1,16 +1,14 @@
 // Get Elements
 const menuContainer = document.querySelector('.header__group__links__list');
 
-// Function to toggleClass
+// Open / Close class
 const toggleOpen = element => {
     event.preventDefault();
     return element.classList.toggle('is-open');
 }
 
-// Function to remove CSS class
-const toggleClose = element => {
-    event.target === element ? element.classList.remove('is-open') : false;
-}
+// Close class
+const closeElement = element => element.classList.remove('is-open');
 
 // Menu open/close
 const menuToggle = () => toggleOpen(menuContainer);
@@ -19,10 +17,19 @@ const menuToggle = () => toggleOpen(menuContainer);
 const modalContainer = document.querySelector('.modal__search');
 const modalToggle = () =>toggleOpen(modalContainer);
 
+// Global click
 window.onclick = event => {
-    toggleClose(modalContainer);
-}
+    event.target === modalContainer
+        ? closeElement(modalContainer, event)
+        : false;
+};
 
+// Global ESC key
+window.onkeydown = e => {
+    e.keyCode === 27
+        ? closeElement(modalContainer)
+        : false;
+};
 
 // Range Value
 var slider = document.getElementById("rangeValue");
