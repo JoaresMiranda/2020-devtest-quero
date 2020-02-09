@@ -714,6 +714,10 @@ footer {
 * Modal
 */
 .modal__search {
+    display: none;
+}
+
+.modal__search.modal-open {
     position: fixed;
     top: 0;
     left: 0;
@@ -722,14 +726,16 @@ footer {
     background-color: rgba(31,45,48, 0.88);
     z-index: 1;
     font-size: 0.8rem;
+    display: block;
 }
 @media (min-width: 768px) {
-    .modal__search {
+    .modal__search.modal-open {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
+
 .modal__search__content__close {
     padding: 0.5rem;
     display: block;
@@ -789,7 +795,6 @@ footer {
     margin-top:0.2rem;
 }
 
-
 .modal__search__form ul {
     display: flex;
     align-items: center;
@@ -798,40 +803,6 @@ footer {
 .modal__search__form li {
     list-style: none;
     margin-right: 2rem;
-}
-.modal__checkbox {
-    position: absolute;
-    opacity: 0;
-}
-.modal__checkbox + label {
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-}
-.modal__checkbox + label:before {
-    content: "";
-    margin-right: 0.5rem;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border: 1px solid var(--grey);
-}
-.modal__checkbox:checked + label:before {
-    background: var(--blue);
-}
-.modal__checkbox:checked + label:after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 7px;
-    background: white;
-    width: 2px;
-    height: 2px;
-    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
 }
 
 .modal__price {
