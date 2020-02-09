@@ -717,7 +717,7 @@ footer {
     display: none;
 }
 
-.modal__search.modal-open {
+.modal__search.is-open {
     position: fixed;
     top: 0;
     left: 0;
@@ -729,7 +729,7 @@ footer {
     display: block;
 }
 @media (min-width: 768px) {
-    .modal__search.modal-open {
+    .modal__search.is-open {
         display: flex;
         justify-content: center;
         align-items: center;

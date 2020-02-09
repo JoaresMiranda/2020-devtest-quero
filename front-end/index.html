@@ -82,7 +82,7 @@
             <section class="cards">
                 <div class="cards__container">
                     <div class="cards__item cards__item__add">
-                        <a href="#">
+                        <a onclick="modalToggle()">
                             <div>
                                 <img src="./assets/images/ic-add-color.svg">
                                 <h3>Adicionar bolsa</h3>
@@ -121,9 +121,9 @@
 
 
         <!-- MODAL-->
-        <div class="modal__search modal-open">
+        <div class="modal__search">
             <div class="modal__search__content">
-                <a class="modal__search__content__close" href="#"><img src="./assets/images/ic-close.svg"></a>
+                <a class="modal__search__content__close" onclick="modalToggle()"><img src="./assets/images/ic-close.svg"></a>
                 <div class="modal__search__main">
                     <div class="modal__search__header container">
                         <h4 class="modal__search__main__title">Adicionar bolsa</h4>
@@ -172,22 +172,6 @@
                         <div class="result container">
                             <h4 class="result__title">Resultado:</h4>
                             <div class="result__group">
-                                
-                                <div class="result__item">
-                                    <div class="result__checkbox"><input type="checkbox"></div>
-                                    <div class="result__school"><img src="./uploads/logo-facul.png"></div>
-                                    <div class="result__item__detail">
-                                        <div class="result__item__course">
-                                            <p class="result__item__namecourse">Administração</p>
-                                            <p>Bacharelado</p>
-                                        </div>
-                                        <div class="result__item__price">
-                                            <p>Bolsa de <span>75%</span></p>
-                                            <p><span>R$ 373 /mês</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-
 
                                 <div class="result__item">
                                     <div class="result__checkbox"><input type="checkbox"></div>
@@ -203,29 +187,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="result__item">
-                                    <div class="result__checkbox"><input type="checkbox"></div>
-                                    <div class="result__school"><img src="./uploads/logo-facul.png"></div>
-                                    <div class="result__item__detail">
-                                        <div class="result__item__course">
-                                            <p class="result__item__namecourse">Administração</p>
-                                            <p>Bacharelado</p>
-                                        </div>
-                                        <div class="result__item__price">
-                                            <p>Bolsa de <span>75%</span></p>
-                                            <p><span>R$ 373 /mês</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
 
                             </div>
                         </div>
                         <div class="modal__buttons container">
-                            <button type="submit" class="button btn-secondary">Cancelar</button>
+                            <button type="submit" class="button btn-secondary" onclick="modalToggle()">Cancelar</button>
                             <button type="submit" class="button btn-disable">Adicionar bolsa(s)</button>
                         </div>
 
@@ -234,7 +200,6 @@
             </div>
         </div>
         <!-- FIM DO MODAL-->
-
 
     </main>
     <footer>
