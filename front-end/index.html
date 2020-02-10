@@ -72,9 +72,9 @@
 
                     <nav class="content__menu">
                         <ul>
-                            <li><a href="#" class="selected">Todos os semestres</a></li>
-                            <li><a href="#">2&ordm; semestre de 2019</a></li>
-                            <li><a href="#">1&ordm; semestre de 2020</a></li>
+                            <li><a href="#" onclick="changeFilter()" class="selected">Todos os semestres</a></li>
+                            <li><a href="#" onclick="changeFilter()">2&ordm; semestre de 2019</a></li>
+                            <li><a href="#" onclick="changeFilter()">1&ordm; semestre de 2020</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -82,7 +82,7 @@
             <section class="cards">
                 <div class="cards__container">
                     <div class="cards__item cards__item__add">
-                        <a href="#">
+                        <a href="#" onclick="modalToggle()">
                             <div>
                                 <img src="./assets/images/ic-add-color.svg">
                                 <h3>Adicionar bolsa</h3>
@@ -90,24 +90,17 @@
                             </div>
                         </a>
                     </div>
-
-
-
-
-
-
-
-
                     
+                    <!-- Exemplo de bolsa adicionada -->
                     <div class="cards__item cards__item__bolsa">
                         <div class="cards__item__bolsa-header">
                             <img class="cards__item__bolsa__brand" src="./uploads/logo-facul.png">
-                            <h4 class="cards__item__bolsa__title destacado uppercase">Anhanguera</h4>
-                            <h5 class="cards__item__bolsa__curso">Arquitetura e Urbanismo</h5>
-                            <p class="nota destacado">3.8<img src="./assets/images/ic-star-full.svg"><img src="./assets/images/ic-star-full.svg"><img src="./assets/images/ic-star-full.svg"><img src="./assets/images/ic-star-half.svg"> <img src="./assets/images/ic-star.svg"></p class="nota destacado">
+                            <h4 class="cards__item__bolsa__university destacado uppercase">Anhanguera</h4>
+                            <h5 class="cards__item__bolsa__course">Arquitetura e Urbanismo</h5>
+                            <p class="score destacado">3.8<img src="./assets/images/ic-star-full.svg"><img src="./assets/images/ic-star-full.svg"><img src="./assets/images/ic-star-full.svg"><img src="./assets/images/ic-star-half.svg"> <img src="./assets/images/ic-star.svg"></p class="nota destacado">
                         </div>
                         <div class="cards__item__bolsa-content">
-                            <p class="cards__item__bolsa__modalidade destacado uppercase">Presencial &middot; Noite</p>
+                            <p class="cards__item__bolsa__kind destacado uppercase">Presencial &middot; Noite</p>
                             <p>Início das aulas em: 05/07/2019</p>
                         </div>
                         <div class="cards__item__bolsa-footer">
@@ -115,15 +108,99 @@
                             <p class="atachado">R$ 1.487,31</p>
                             <p class="preco-quero"><span>R$ 453,63</span> /mês</p>
                         </div>
-                        <div class="cards__item__bolsa-botoes">
+                        <div class="cards__item__bolsa-buttons">
                             <button type="submit" class="button btn-secondary">Excluir</button>
                             <button type="submit" class="button btn-primary">Ver oferta</button>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
+
+
+
+
+        <!-- MODAL-->
+        <div class="modal__search">
+            <div class="modal__search__content">
+                <a class="modal__search__content__close" href="#" onclick="modalToggle()"><img src="./assets/images/ic-close.svg"></a>
+                <div class="modal__search__main">
+                    <div class="modal__search__header container">
+                        <h4 class="modal__search__main__title">Adicionar bolsa</h4>
+                        <p>Filtre e adicione as bolsas de seu interesse.</p>
+                    </div>
+                    <form>
+                        <div class="modal__search__form container">
+                            <div class="modal__search__group">
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Selecione sua cidade</p>
+                                    <select>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Selecione o curso de sua preferência</p>
+                                    <select>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                        <option>Fortaleza</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal__search__group">
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Como você quer estudar?</p>
+                                    <ul>
+                                        <li><input type="checkbox" id="checkbox-1" class="modal__checkbox"> <label for="checkbox-1">Presencial</label></li>
+                                        <li><input type="checkbox"id="checkbox-2" class="modal__checkbox"> <label for="checkbox-2">A distância</label></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="modal__search__form__question uppercase">Até quanto pode pagar?</p>
+                                    <p class="modal__price">R$ <span id="price-range"></span></p>
+                                    <input type="range" class="selectValue" id="rangeValue" value="3000" min="0" max="10000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="result container">
+                            <h4 class="result__title">Resultado:</h4>
+                            <div class="result__group">
+
+                                <div class="result__item">
+                                    <div class="result__checkbox"><input type="checkbox"></div>
+                                    <div class="result__school"><img src="./uploads/logo-facul.png"></div>
+                                    <div class="result__item__detail">
+                                        <div class="result__item__course">
+                                            <p class="result__item__namecourse">Administração</p>
+                                            <p>Bacharelado</p>
+                                        </div>
+                                        <div class="result__item__price">
+                                            <p>Bolsa de <span>75%</span></p>
+                                            <p><span>R$ 373 /mês</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal__buttons container">
+                            <button type="submit" class="button btn-secondary" onclick="modalToggle()">Cancelar</button>
+                            <button type="submit" class="button btn-disable">Adicionar bolsa(s)</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- FIM DO MODAL-->
+
     </main>
     <footer>
         <div class="footer__container">
