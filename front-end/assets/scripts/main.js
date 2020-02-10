@@ -36,12 +36,17 @@ window.onkeydown = e => {
 };
 
 // Filter Cards
-const filterCards = document.querySelectorAll('.content__menu ul li a');
-const selectFilter = filterCards.length;
-console.log(selectFilter)
-
-const changeFilter = () => filterCards.classList.toggle('selected');
-
+const container = [...document.querySelectorAll('.content__menu ul li a')];
+const changeTabs = () => {
+    event.preventDefault();
+    container.map(item => {
+        return item.classList.remove('selected');
+    });
+    event.target.classList.add('selected');
+}
+const changeFilter = e => {
+    changeTabs();
+}
 
 
 // Range Value
