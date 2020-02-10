@@ -17,18 +17,22 @@ const menuToggle = () => toggleOpen(menuContainer);
 const modalContainer = document.querySelector('.modal__search');
 const modalToggle = () =>toggleOpen(modalContainer);
 
+// Close OnClick
+const closeOnClick = element => 
+    event.target === element ? closeElement(modalContainer, event) : false;
+
 // Global click
 window.onclick = event => {
-    event.target === modalContainer
-        ? closeElement(modalContainer, event)
-        : false;
+    closeOnClick(modalContainer);
+    closeOnClick(menuContainer);
 };
 
 // Global ESC key
 window.onkeydown = e => {
-    e.keyCode === 27
-        ? closeElement(modalContainer)
-        : false;
+    if (e.keyCode === 27) {
+        closeElement(modalContainer);
+        closeElement(menuContainer);
+    }
 };
 
 // Range Value
