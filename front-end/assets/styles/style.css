@@ -491,13 +491,13 @@ main {
     text-transform: uppercase;
 }
 
-.cards__item__bolsa__curso {
+.cards__item__bolsa__course {
     color: var(--blue-sec);
     font-size: 1.1rem;
     margin: 0.5rem 0;
 }
 
-.cards__item__bolsa-header .nota {
+.cards__item__bolsa-header .score {
     font-size: 1.05rem;
     display: flex;
     align-items: center;
@@ -505,15 +505,15 @@ main {
     width: 130px;
     margin: 0 auto;
 }
-.cards__item__bolsa-header .nota img:first-child {
+.cards__item__bolsa-header .score img:first-child {
     margin-left: 0.5rem;
 }
-.cards__item__bolsa-header .nota img {
+.cards__item__bolsa-header .score img {
     width: 16px;
     padding-top: 2px;
 }
 
-.cards__item__bolsa-content .cards__item__bolsa__modalidade {
+.cards__item__bolsa-content .cards__item__bolsa__kind {
     margin-bottom: 0.5rem;
 }
 
