@@ -15,7 +15,7 @@ const menuToggle = () => toggleOpen(menuContainer);
 
 // Modal toggle
 const modalContainer = document.querySelector('.modal__search');
-const modalToggle = () =>toggleOpen(modalContainer);
+const modalToggle = () => toggleOpen(modalContainer);
 
 // Close OnClick
 const closeOnClick = element => 
@@ -39,6 +39,4 @@ window.onkeydown = e => {
 var slider = document.getElementById("rangeValue");
 var output = document.getElementById("price-range");
 output.innerHTML = slider.value;
-slider.oninput = function() {
-    output.innerHTML = this.value;
-}
+slider.oninput = () => output.innerHTML = slider.value;
