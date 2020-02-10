@@ -35,6 +35,15 @@ window.onkeydown = e => {
     }
 };
 
+// Filter Cards
+const filterCards = document.querySelectorAll('.content__menu ul li a');
+const selectFilter = filterCards.length;
+console.log(selectFilter)
+
+const changeFilter = () => filterCards.classList.toggle('selected');
+
+
+
 // Range Value
 var slider = document.getElementById("rangeValue");
 var output = document.getElementById("price-range");
