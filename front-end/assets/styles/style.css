@@ -239,7 +239,7 @@ a {
 .is-open.header__group__links__list a:hover,
 .header__group__links__list .selected {
     background-color: var(--blue-sec);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .header__group__menu__title {
@@ -259,7 +259,7 @@ a {
     position: absolute;
     top: 30px;
     background-color: var(--blue);
-    width: 200px;
+    width: 285px;
     transition: all 50s ease-in-out;
 }
 .is-open.header__group__links__list a {
@@ -282,7 +282,7 @@ a {
     .header__group__links__list a:hover,
     .header__group__links__list .selected {
         background-color: var(--blue-sec);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -394,7 +394,7 @@ main {
 .content__menu a:hover {
     background-color: var(--blue-sec);
     color: #FFF;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -556,7 +556,7 @@ main {
 .btn-secondary:hover {
     background-color: var(--blue-sec);
     color: var(--white);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .btn-primary {
     border-color: var(--yellow-sec);
@@ -565,7 +565,7 @@ main {
 .btn-primary:hover {
     background-color: var(--yellow-sec);
     color: var(--white);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .btn-disable {
     border-color: #7A8183;
@@ -596,7 +596,7 @@ footer {
 
 .footer__cards__item:hover {
     background-color: var(--blue);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .footer__cards__item {
