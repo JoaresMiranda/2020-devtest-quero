@@ -709,6 +709,8 @@ footer {
 */
 .modal__search {
     display: none;
+    transition: all 50s ease-in-out;
+    opacity: 0;
 }
 
 .modal__search.is-open {
@@ -721,6 +723,7 @@ footer {
     z-index: 1;
     font-size: 0.8rem;
     display: block;
+    opacity: 1;
 }
 @media (min-width: 768px) {
     .modal__search.is-open {
