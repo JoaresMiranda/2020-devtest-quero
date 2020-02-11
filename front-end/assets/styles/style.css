@@ -65,15 +65,15 @@ a {
 
 .desktop-only {
     display: none;
-   }
-   @media (min-width: 768px) {
-       .desktop-only {
-           display: block;
-       }
-       .mobile-only {
-           display: none;
-       }
-   }
+}
+@media (min-width: 768px) {
+    .desktop-only {
+        display: block;
+    }
+    .mobile-only {
+        display: none;
+    }
+}
    
 
 /*
@@ -239,6 +239,7 @@ a {
 .is-open.header__group__links__list a:hover,
 .header__group__links__list .selected {
     background-color: var(--blue-sec);
+    transition: all 0.5s ease-in-out;
 }
 
 .header__group__menu__title {
@@ -259,6 +260,7 @@ a {
     top: 30px;
     background-color: var(--blue);
     width: 200px;
+    transition: all 50s ease-in-out;
 }
 .is-open.header__group__links__list a {
     display: block;
@@ -280,6 +282,7 @@ a {
     .header__group__links__list a:hover,
     .header__group__links__list .selected {
         background-color: var(--blue-sec);
+        transition: all 0.5s ease-in-out;
     }
 }
 
@@ -391,6 +394,7 @@ main {
 .content__menu a:hover {
     background-color: var(--blue-sec);
     color: #FFF;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -552,6 +556,7 @@ main {
 .btn-secondary:hover {
     background-color: var(--blue-sec);
     color: var(--white);
+    transition: all 0.5s ease-in-out;
 }
 .btn-primary {
     border-color: var(--yellow-sec);
@@ -560,6 +565,7 @@ main {
 .btn-primary:hover {
     background-color: var(--yellow-sec);
     color: var(--white);
+    transition: all 0.5s ease-in-out;
 }
 .btn-disable {
     border-color: #7A8183;
@@ -590,6 +596,7 @@ footer {
 
 .footer__cards__item:hover {
     background-color: var(--blue);
+    transition: all 0.5s ease-in-out;
 }
 
 .footer__cards__item {
@@ -702,6 +709,8 @@ footer {
 */
 .modal__search {
     display: none;
+    transition: all 50s ease-in-out;
+    opacity: 0;
 }
 
 .modal__search.is-open {
@@ -714,6 +723,7 @@ footer {
     z-index: 1;
     font-size: 0.8rem;
     display: block;
+    opacity: 1;
 }
 @media (min-width: 768px) {
     .modal__search.is-open {
@@ -807,7 +817,7 @@ footer {
     margin-top: 1rem;
 }
 .selectValue:hover {
-opacity: 1;
+    opacity: 1;
 }
 .selectValue::-webkit-slider-thumb {
     -webkit-appearance: none;
